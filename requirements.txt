@@ -1,0 +1,15 @@
+cudatoolkit==10.2.89
+matplotlib==3.3.2
+mpi==1.0
+mpi4py==3.0.3
+networkx==2.5
+numpy==1.19.2
+openmpi==3.1.4
+pymetis==2020.1
+torch==1.6.0
+torch-cluster==1.5.7
+torch-geometric==1.6.3
+torch-scatter==2.0.5
+torch-sparse==0.6.7
+torch-spline-conv==1.2.0
+torchvision==0.7.0

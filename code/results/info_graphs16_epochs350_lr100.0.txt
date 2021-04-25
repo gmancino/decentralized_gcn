@@ -1,0 +1,9 @@
+% -------------------------- TRAINING INFORMATION -------------------------- %
+[DATASET] Cora
+[NUM NODES] 16
+[EPOCHS] 350
+[CONNECTION GRAPH] maximum eig: 0.9999997615814209, minimum eig: 0.7419357299804688
+[LOCAL LEARNING RATE] 100.0
+[NUM TRAINING DATA] 140
+[TOTAL TRAINING TIME] 4.043647289276123
+% -------------------------------------------------------------------------- %
