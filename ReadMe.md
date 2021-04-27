@@ -19,9 +19,15 @@ Graph Convolutional Networks ([GCNs](https://arxiv.org/pdf/1609.02907.pdf)) can 
 
 ## How to run on AiMOS
 
-[AiMOS](https://cci.rpi.edu/aimos) is the supercomputer located on RPI's campus. As usernames and project names are sensitive material, below is a mock `.sh` file script that would need to be located in the `code` folder to run this script with multiple GPUs.
+[AiMOS](https://cci.rpi.edu/aimos) is the supercomputer located on RPI's campus. As usernames and project names are sensitive material, below is a mock `.sh` file script that would need to be located in the `code` folder to run this script with multiple GPUs. We utilize the [NPL Cluster](https://secure.cci.rpi.edu/wiki/clusters/NPL_Cluster/) on AiMOS.
 
-**Note:** anthing in `<>` brackets is considered a user argument and _must_ be specified before running on AiMOS.
+**Note:** anthing in `<>` brackets is considered a user argument and _must_ be specified before running on AiMOS. These are:
+
++ `<path_to_conda>`: points to the directory where [miniconda]((https://docs.conda.io/en/latest/miniconda.html)) is located
++ `<your_env>`: the name of your conda environment that contains the packages in the `requirements.txt` file
++ `<path_to_code_folder>`: absolute path to the `code` folder
++ `<num_nodes>`: number of computing nodes to use (max used in the report is 4)
++ `<num_gpus>`: number of GPUs in each computing node (max is 8 for the NPL Cluster)
 
 ```
 #!/bin/bash -x
@@ -91,3 +97,5 @@ Once the `.sh` file has been included in the `code` folder, the following comman
 ```
 sbatch -N<num_nodes> --ntasks-per-node=<num_gpus> --gres=gpu:<num_gpus> -t 5:00 -o <path_to_code_folder>/code/output_file_name.out <path_to_code_folder>/code/runScript.sh -e 350 -l 50
 ```
+
+**Note:** we _must_ be in the `code` directory when we submit the above script.
